@@ -1,3 +1,5 @@
+import Sidenav from "../../components/sidenav"
+
 const Dashboard = () => {
   return (
     <div>
