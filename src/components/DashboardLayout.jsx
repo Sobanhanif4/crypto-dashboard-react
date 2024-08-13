@@ -4,20 +4,26 @@ import TopNav from "./TopNav";
 import SideDrawer from "./SideDrawer";
 
 const DashboardLayout = ({ title, children }) => {
-    const {isOpen, onClose, onOpen} = useDisclosure();
-
+  const { isOpen, onClose, onOpen } = useDisclosure();
 
   return (
-
-      <Flex>
+    <Flex>
+      <Box
+        display={{
+          base: "none",
+          lg: "flex",
+        }}
+      >
         <Sidenav />
-        <SideDrawer isOpen={isOpen} onClose={onclose}/>
-        <Box flexGrow={1}>
-          <TopNav title={title} />
-          <Container bg="red" maxW="70rem">{children}</Container>
-        </Box>
-      </Flex>
- 
+      </Box>
+      <SideDrawer isOpen={isOpen} onClose={onclose} />
+      <Box flexGrow={1}>
+        <TopNav title={title} onOpen={onOpen} />
+        <Container bg="red" maxW="70rem">
+          {children}
+        </Container>
+      </Box>
+    </Flex>
   );
 };
 

@@ -9,12 +9,17 @@ import {
   MenuItem,
   MenuList,
 } from "@chakra-ui/react";
-import { FaUserCircle } from "react-icons/fa";
+import { FaBars, FaUserCircle } from "react-icons/fa";
 
-const TopNav = ({ title }) => {
+const TopNav = ({ title, onOpen }) => {
   return (
-    <Box>
+    <Box px="4">
       <HStack maxW="70rem" h="16" justify="space-between" mx="auto">
+        <Icon as={FaBars} onClick={onOpen} display={{
+          base: "block",
+          lg: "none"
+
+        }}/>
         <Heading fontWeight="medium" fontSize="28px">
           {title}
         </Heading>
