@@ -23,7 +23,9 @@ const Sidenav = () => {
 
 
     return (
-        <Stack justify= "space-between" boxShadow="lg" maxW="256px" h="100vh">
+        <Stack justify= "space-between" boxShadow="lg" w="256px" h="100vh"
+        
+        >
             <Box>
                 <Heading textAlign="center" as="h1" fontSize="20px" pt="3.5rem">
                     WrathRex Code
