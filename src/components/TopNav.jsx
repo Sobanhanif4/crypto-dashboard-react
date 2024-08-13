@@ -1,4 +1,5 @@
 import {
+    Box,
   Button,
   Heading,
   HStack,
@@ -11,8 +12,9 @@ import { IoChevronDownCircleOutline } from "react-icons/io5";
 
 const TopNav = () => {
   return (
-    <HStack maxW="60rem" boxShadow="xl" h="16" justify="space-between" px={32}>
-      <Heading>Dashboard</Heading>
+    <Box boxShadow="xl">
+    <HStack maxW="60rem" h="16" justify="space-between" px={32} mx="auto" >
+      <Heading fontSize= "28px">Dashboard</Heading>
 
       <Menu>
         <MenuButton as={Button} rightIcon={<IoChevronDownCircleOutline />}>
@@ -27,6 +29,7 @@ const TopNav = () => {
         </MenuList>
       </Menu>
     </HStack>
+    </Box>
   );
 };
 
