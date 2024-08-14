@@ -48,9 +48,10 @@ const PorfolioSection = () => {
             PKR 112,312.24
           </Text>
         </Stack>
+
         <Stack>
           <HStack color="black.80">
-            <Text fontSize="14px">Wallet Balances</Text>
+            <Text fontSize="sm">Wallet Balances</Text>
           </HStack>
           <HStack
             spacing={4}
