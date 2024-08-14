@@ -1,9 +1,10 @@
 import DashboardLayout from "../../components/DashboardLayout";
+import PorfolioSection from "./components/PorfolioSection";
 
 const Dashboard = ({}) => {
   return (
   <DashboardLayout title="Dashboard">
-    <div>How are you?</div>
+    <PorfolioSection />
   </DashboardLayout>
   );
 };

@@ -19,17 +19,19 @@ const Sidenav = () => {
   ];
 
   return (
-    <Stack 
-    justify="space-between" 
-    boxShadow={{
+    <Stack
+      bg="white"
+      justify="space-between"
+      boxShadow={{
         base: "none",
         lg: "lg",
-    }}
-    w={{
+      }}
+      w={{
         base: "full",
-        lg: "16rm"
-    }}
-    h="100vh">
+        lg: "16rm",
+      }}
+      h="100vh"
+    >
       <Box>
         <Heading textAlign="center" as="h1" fontSize="20px" pt="3.5rem">
           WrathRex Code
