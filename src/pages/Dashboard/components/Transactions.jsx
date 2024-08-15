@@ -1,8 +1,9 @@
-import { Box, Flex, Grid, Icon, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Divider, Flex, Grid, Icon, Stack, Text } from "@chakra-ui/react";
 import { CustomCard } from "../../../chakra/CustomCard";
 import { FaRupeeSign } from "react-icons/fa";
 import { PiCurrencyBtcFill } from "react-icons/pi";
 import { AiFillDollarCircle } from "react-icons/ai";
+import { Fragment } from "react";
 
 const Transactions = () => {
   const transactions = [
@@ -30,31 +31,39 @@ const Transactions = () => {
   ];
 
   return (
-    <CustomCard>
-      <Text>Recent Transactions</Text>
-      <Stack>
-        {transactions.map((transaction) => (
-          <Flex key={transaction.id} gap="4">
-            <Grid  placeItems="center" bg="black.5" boxSize={10} borderRadius="full">
-              <Icon as={transaction.icon} />
-            </Grid>
+    <CustomCard h="full">
+      <Text mb="6" fontSize="sm" color="black.80">
+        Recent Transactions
+      </Text>
+      <Stack spacing={4}>
+        {transactions.map((transaction, i) => (
+          <Fragment key={transaction.id}>
+            {i != 0 &&  <Divider/>}
+            <Flex gap="4">
+              <Grid
+                placeItems="center"
+                bg="black.5"
+                boxSize={10}
+                borderRadius="full"
+              >
+                <Icon as={transaction.icon} />
+              </Grid>
 
-            <Flex justify="space-between" width="full" >
+              <Flex justify="space-between" width="full">
                 <Stack spacing={0}>
-                    <Text textStyle="h6">
-                        {transaction.text}
-                    </Text>
-                    <Text fontSize="sm" color="black.80">
-                        {transaction.timeStamp}
-                    </Text>
+                  <Text textStyle="h6">{transaction.text}</Text>
+                  <Text fontSize="sm" color="black.80">
+                    {transaction.timeStamp}
+                  </Text>
                 </Stack>
-                <Text fontSize="sm" color="black.80">
-                        {transaction.amount}
-                    </Text>
+                <Text textStyle="h6">{transaction.amount}</Text>
+              </Flex>
             </Flex>
-          </Flex>
+          </Fragment>
         ))}
       </Stack>
+
+      <Button mt="6" w="full" colorScheme="gray">View All</Button>
     </CustomCard>
   );
 };

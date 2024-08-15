@@ -3,6 +3,7 @@ import DashboardLayout from "../../components/DashboardLayout";
 import PorfolioSection from "./components/PorfolioSection";
 import PriceSection from "./components/PriceSection";
 import Transactions from "./components/Transactions";
+import InfoCard from "./components/InfoCard";
 
 const Dashboard = ({}) => {
   return (
@@ -22,6 +23,9 @@ const Dashboard = ({}) => {
         </GridItem>
         <GridItem colSpan={1}>
           <Transactions />
+        </GridItem>
+        <GridItem colSpan={1}>
+          <InfoCard />
         </GridItem>
       </Grid>
     </DashboardLayout>
