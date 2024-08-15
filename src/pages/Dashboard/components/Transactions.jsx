@@ -34,20 +34,23 @@ const Transactions = () => {
       <Text>Recent Transactions</Text>
       <Stack>
         {transactions.map((transaction) => (
-          <Flex key={transaction.id}>
+          <Flex key={transaction.id} gap="4">
             <Grid  placeItems="center" bg="black.5" boxSize={10} borderRadius="full">
               <Icon as={transaction.icon} />
             </Grid>
 
-            <Flex justify="space-between">
-                <Stack>
-                    <Text fontSize="sm" color="black.80">
+            <Flex justify="space-between" width="full" >
+                <Stack spacing={0}>
+                    <Text textStyle="h6">
                         {transaction.text}
                     </Text>
                     <Text fontSize="sm" color="black.80">
                         {transaction.timeStamp}
                     </Text>
                 </Stack>
+                <Text fontSize="sm" color="black.80">
+                        {transaction.amount}
+                    </Text>
             </Flex>
           </Flex>
         ))}
