@@ -1,9 +1,10 @@
 import DashboardLayout from "../../components/DashboardLayout"
+import SupportCard from "./components/SupportCard"
 
 const Support = () => {
   return (
     <DashboardLayout>
-      Support
+      <SupportCard />
     </DashboardLayout>
   )
 }

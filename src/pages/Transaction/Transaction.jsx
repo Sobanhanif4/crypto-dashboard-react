@@ -17,9 +17,7 @@ import {
 } from "@chakra-ui/react";
 import DashboardLayout from "../../components/DashboardLayout";
 import { AiOutlineDownload } from "react-icons/ai";
-import TransactionTable from "./components/TransactionTable";
 import { BiSearch } from "react-icons/bi";
-import TransactionCardMob from "./components/TransactionCardMob";
 import ResponsiveComponent from "./components/TransactionDisplay";
 const TransactionPage = () => {
   const tabs = [
@@ -42,7 +40,7 @@ const TransactionPage = () => {
   ];
 
   return (
-    <DashboardLayout>
+    <DashboardLayout title="Transaction">
       <Flex justify="end" mt="6" mb="3">
         <Button leftIcon={<Icon as={AiOutlineDownload} />}>Export CSV</Button>
       </Flex>
