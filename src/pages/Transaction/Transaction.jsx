@@ -20,6 +20,7 @@ import { AiOutlineDownload } from "react-icons/ai";
 import TransactionTable from "./components/TransactionTable";
 import { BiSearch } from "react-icons/bi";
 import TransactionCardMob from "./components/TransactionCardMob";
+import ResponsiveComponent from "./components/TransactionDisplay";
 const TransactionPage = () => {
   const tabs = [
     {
@@ -74,14 +75,13 @@ const TransactionPage = () => {
           <TabIndicator />
           <TabPanels>
             <TabPanel>
-              <TransactionCardMob />
-              {/* <TransactionTable /> */}
+              <ResponsiveComponent />
             </TabPanel>
             <TabPanel>
-              {/* <TransactionTable /> */}
+              <ResponsiveComponent />
             </TabPanel>
             <TabPanel>
-              {/* <TransactionTable /> */}
+              <ResponsiveComponent />
             </TabPanel>
           </TabPanels>
         </Tabs>

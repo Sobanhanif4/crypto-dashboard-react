@@ -12,7 +12,7 @@ import {
   Text,
   Tag,
 } from "@chakra-ui/react";
-const TransactionTable = () => {
+const TransactionTable = (isMobile) => {
   const tableData = [
     {
       id: "HD82NA2H",
